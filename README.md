@@ -1,3 +1,3 @@
 # izzi-strapi-cms
 
-A quick description of izzi-strapi-cms.
+Repositorio de contenidos para las paginas de izzi
