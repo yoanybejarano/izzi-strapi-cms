@@ -1,0 +1,123 @@
+"""
+The `DateTime` scalar represents a date and time following the ISO 8601 standard
+"""
+scalar DateTime
+
+"""Hubs izzi"""
+type Hub {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  area: String
+  hub_value: String
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+union Morph = Hub | Pagina | Paquete | Producto | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+
+"""Paginas izzi"""
+type Pagina {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String
+  metadescripcion: String
+  tituloNavegador: String
+  segmentoHtml: String
+  template: String
+}
+
+"""Paquetes izzi"""
+type Paquete {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  nombre: String
+  nombre_comercial: String
+  velocidad: Int
+  descripcion: String
+  descripcion_contratacion: String
+  descripcion_extendida: String
+  descripcion_internet: String
+  descripcion_promocion: String
+  descripcion_seleccionado: String
+  descripcion_telefonia: String
+  descripcion_tv: String
+  imagen: UploadFile
+  precio_efectivo: Int
+  precio_tc: Int
+}
+
+"""Productos izzi"""
+type Producto {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  nombre: String
+  precio: Int
+}
+
+type Query {
+  hub(id: ID!): Hub
+  hubs(sort: String, limit: Int, start: Int, where: JSON): [Hub]
+  pagina(id: ID!): Pagina
+  paginas(sort: String, limit: Int, start: Int, where: JSON): [Pagina]
+  paquete(id: ID!): Paquete
+  paquetes(sort: String, limit: Int, start: Int, where: JSON): [Paquete]
+  producto(id: ID!): Producto
+  productos(sort: String, limit: Int, start: Int, where: JSON): [Producto]
+  files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
+  role(id: ID!): UsersPermissionsRole
+
+  """
+  Retrieve all the existing roles. You can't apply filters on this query.
+  """
+  roles(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsRole]
+  user(id: ID!): UsersPermissionsUser
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UploadFile {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  hash: String!
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  related(sort: String, limit: Int, start: Int, where: JSON): [Morph]
+}
+
+type UsersPermissionsPermission {
+  _id: ID!
+  type: String!
+  controller: String!
+  action: String!
+  enabled: Boolean!
+  policy: String
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsRole {
+  _id: ID!
+  name: String!
+  description: String
+  type: String
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+  permissions(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsPermission]
+}
+
+type UsersPermissionsUser {
+  _id: ID!
+  username: String!
+  email: String!
+  provider: String
+  role: UsersPermissionsRole
+}

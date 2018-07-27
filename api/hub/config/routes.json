@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hub",
+      "handler": "Hub.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hub/count",
+      "handler": "Hub.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hub/:_id",
+      "handler": "Hub.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/hub",
+      "handler": "Hub.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hub/:_id",
+      "handler": "Hub.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hub/:_id",
+      "handler": "Hub.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

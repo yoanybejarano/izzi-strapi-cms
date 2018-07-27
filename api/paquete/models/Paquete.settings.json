@@ -1,0 +1,57 @@
+{
+  "connection": "default",
+  "collectionName": "paquete",
+  "info": {
+    "name": "paquete",
+    "description": "Paquetes izzi"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "nombre_comercial": {
+      "type": "string"
+    },
+    "velocidad": {
+      "type": "integer"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "descripcion_contratacion": {
+      "type": "text"
+    },
+    "descripcion_extendida": {
+      "type": "text"
+    },
+    "descripcion_internet": {
+      "type": "text"
+    },
+    "descripcion_promocion": {
+      "type": "text"
+    },
+    "descripcion_seleccionado": {
+      "type": "text"
+    },
+    "descripcion_telefonia": {
+      "type": "text"
+    },
+    "descripcion_tv": {
+      "type": "text"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "precio_efectivo": {
+      "type": "integer"
+    },
+    "precio_tc": {
+      "type": "integer"
+    }
+  }
+}

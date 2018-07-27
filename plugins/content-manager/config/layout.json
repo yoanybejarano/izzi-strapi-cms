@@ -1,0 +1,87 @@
+{
+  "paquete": {
+    "attributes": {
+      "nombre": {
+        "appearance": ""
+      },
+      "tags": {
+        "appearance": ""
+      },
+      "nombre_comercial": {
+        "appearance": ""
+      },
+      "velocidad": {
+        "appearance": ""
+      },
+      "descripcion": {
+        "appearance": ""
+      },
+      "descripcion_contratacion": {
+        "appearance": ""
+      },
+      "descripcion_extendida": {
+        "appearance": ""
+      },
+      "descripcion_internet": {
+        "appearance": ""
+      },
+      "descripcion_promocion": {
+        "appearance": ""
+      },
+      "descripcion_seleccionado": {
+        "appearance": ""
+      },
+      "descripcion_telefonia": {
+        "appearance": ""
+      },
+      "descripcion_tv": {
+        "appearance": ""
+      },
+      "precio_efectivo": {
+        "appearance": ""
+      },
+      "precio_tc": {
+        "appearance": ""
+      }
+    }
+  },
+  "producto": {
+    "attributes": {
+      "nombre": {
+        "appearance": ""
+      },
+      "precio": {
+        "appearance": ""
+      }
+    }
+  },
+  "hub": {
+    "attributes": {
+      "area": {
+        "appearance": ""
+      },
+      "hub_value": {
+        "appearance": ""
+      }
+    }
+  },
+  "pagina": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "template": {
+        "appearance": ""
+      },
+      "metadescripcion": {
+        "appearance": ""
+      },
+      "tituloNavegador": {
+        "appearance": ""
+      },
+      "segmentoHtml": {
+        "appearance": ""
+      }
+    }
+  }
+}

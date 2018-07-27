@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "hub",
+    "description": "Hubs izzi"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "area": {
+      "type": "string"
+    },
+    "hub_value": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "pagina",
+  "info": {
+    "name": "pagina",
+    "description": "Paginas izzi"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "metadescripcion": {
+      "type": "string"
+    },
+    "tituloNavegador": {
+      "type": "string"
+    },
+    "segmentoHtml": {
+      "type": "text"
+    },
+    "template": {
+      "type": "string"
+    }
+  }
+}
